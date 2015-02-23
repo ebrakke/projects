@@ -1,0 +1,58 @@
+{	"scrape_settings":
+	{
+		"request_interval":2,
+		"verbose":false
+	},
+
+	"entities":[
+	{
+		"front_page":
+			{
+				"query_info":
+					{
+						"url_subpath": "",
+						"extension": ".json",
+						"type": "range",
+						"params":["count"],
+						"range_info":[0,300,50]
+						
+					},
+				"json_info":
+					{
+						"entries":["data","children"],
+						"entry":["data"],
+						"info":["subreddit","url","domain","title","author"]
+
+					},
+				"file_info":
+					{
+						"file_type":".json"
+					}
+
+		},
+		"ask_reddit":
+			{
+				"query_info":
+					{
+						"url_subpath":"r/AskReddit",
+						"extension":".json",
+						"params":["count"],
+						"type":"range",
+						"range_info":[0,300,50]
+					},
+				"json_info":
+					{
+						"entries":["data","children"],
+						"entry":["data"],
+						"info":["author","url","domain","title"]
+					},
+				"file_info":
+					{
+						"path_from_home":"posts",
+						"file_type":".json"
+					}
+
+			}
+		}
+	]
+}
